@@ -4,9 +4,9 @@ import json
 
 app = Flask(__name__)
 
-with open('secret_key.json') as f:
-  secret_key = json.load(f)
-
+# with open('strings.json') as f:
+  # secret_key = json.load(f)
+secret_key = 'ffaedsfn23hn9u'
 app.config['SECRET_KEY'] = secret_key
 
 posts = [
