@@ -4,12 +4,13 @@ import json
 
 app = Flask(__name__)
 
-# with open('strings.json') as f:
-  # secret_key = json.load(f)
-secret_key = 'ffaedsfn23hn9u'
-app.config['SECRET_KEY'] = secret_key
+with open('secret_key.json') as f:
+  secret_key = json.load(f)
+  
+app.config['SECRET_KEY'] = json.dumps(secret_key)
 
 posts = [
+
   {
     'author': 'Gabriel Sinca',
     'title': 'First blog post',
